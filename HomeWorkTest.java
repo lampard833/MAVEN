@@ -2,7 +2,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
+//import org.openqa.selenium.support.ui.Select;
 
 public class HomeWorkTest {
 
@@ -16,9 +16,12 @@ public class HomeWorkTest {
         driver.findElement(By.xpath("//input [@id=\"icon_prefix\"]")).sendKeys("Hellboy");
         driver.findElement(By.xpath("//input [@id=\"icon_telephone\"]")).clear();
         driver.findElement(By.xpath("//input [@id=\"icon_telephone\"]")).sendKeys("123456789");
+        driver.findElement(By.xpath("//input[@class='select-dropdown']")).click();
+        driver.findElement(By.xpath("//form/div/div/ul/li[1]")).click();
         //Select role = new Select(driver.findElement(By.xpath("//select[@class ='initialized']")));
         //role.selectByValue("Admin");
         driver.findElement(By.xpath("//a [@class='save-btn waves-effect waves-light btn']")).click();
+
 
         }
 }
